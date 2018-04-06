@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录-麦乐购-全球精品母婴商城</title>
+		<link rel="stylesheet" href="css/denglu.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
+		<script type="text/javascript" src="js/require.js" data-main="js/index" defer async="true" ></script>
+		<script type="text/javascript" src="js/cookie.js" ></script>
+		<link rel="shortcut icon" href="images/favicon.ico" /> 
+	</head>
+	<body>
+		<div class="settleTop">
+			<h1>
+				<img src="images/dllogo.gif" alt="" />
+			</h1>
+			<div class="stepCar">
+				<img src="images/dllogo2.png" alt="" />
+			</div>		
+		</div>
+		<div class="regMain">
+			<div class="regLeft">
+				<img src="images/y_f47pogB_mW6latDSyH4k.png" alt="" />
+			</div>
+			<div class="regRight">
+				<div class="denglu">
+					<h2>登录</h2>
+					<span class="rR">
+						<a href="zhuce.html" class="freregister">免费快速注册</a>
+					</span>
+				</div>
+				
+				<div class="loginForm">
+					<li class="liLab">
+						<a class="user"></a>
+						<input type="text" placeholder="手机号码/邮箱/用户名" id="input1"/>
+						<p class="focusTex focusTex1">请输入账号</p>
+					</li>
+					<li class="liLab liLab2">
+						<a class="user userpass"></a>
+						<input type="text" placeholder="密码" id="input2"/>
+						<p class="focusTex focusTex2">请输入密码</p>
+					</li>
+					
+					<li class="liLab liLab4">
+						<a href="">忘记登录</a>
+					</li>
+					<li class="liLab5">
+						<input type="button" value="登录" id="input3"/>
+						
+					</li>
+					<div class="qita">
+						<h4>使用其他账号登录</h4>
+						<a href="" class="qq"></a>
+						<a href="" class="alipy"></a>
+						<a href="" class="qws360"></a>
+						<a href="" class="sina"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var oInput = document.getElementsByTagName("input");
+			var focusTex1 = document.querySelector(".focusTex1");
+			var focusTex2 = document.querySelector(".focusTex2");
+			oInput[0].onblur = function(){
+				var re1 = /^(13|14|15|17|18)\d{9}$/g;//手机号
+				var re2 = /^([\w]+)@(126|163|qq)\.(com|cn)$/g;//邮箱
+				var re3 = /^[A-Za-z0-9]{6,12}$/g; //6~12位，必须是字母与数字组成。
+				if((re1 || re2 || re3).test(input1).value == false || input1.value == ""){
+					focusTex1.style.display = "block";
+				}
+			}
+			oInput[1].onblur = function(){
+				var re = /^([0-9])([\w\.\+\*\$\/\\]{5})$/g; 
+				if(re.test().value == false || input2.value == ""){
+					focusTex2.style.display = "block";
+				}
+			}
+			oInput[2].onclick = function(){
+				for(var i=0;i<oInput[i].length-2;i++){
+					  if(oInput[i].value == ""){
+	 			alert("请将信息补充完整")
+	 			return ;
+	 		   		 }
+				}
+				var json = {
+					"user":oInput[0].value,
+					"pwd":oInput[1].value
+				}
+				if(getCookie(json.user) ==oInput[1].value){
+					alert("登录成功");
+					setCookie("name",json.user,7);
+					location.href = "index.html"
+				}else{
+					alert("登录失败，请先注册！");
+					location.href = "zhuce.html"
+				}
+			}
+			
+		</script>
+	</body>
+</html>

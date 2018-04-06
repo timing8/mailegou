@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/require.js" data-main="js/index" defer async="true" ></script>
+		<link rel="stylesheet" href="css/jiesuan.css" />
+		<link rel="shortcut icon" href="images/favicon.ico"/> 
+		<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>	
+	</head>
+	<body>
+		<div class="myshopping">
+			<h1>购物车</h1>
+			<form action="">
+				<p class="allCho">
+					<input type="checkbox" />
+					全选
+				</p>
+				<table>
+					<thead>
+						<div class="thead1">
+							<td width="50%">
+								<input type="checkbox" />由麦乐购发货
+							</td>
+							<td width="15%">单价</td>
+							<td width="15%">数量</td>
+							<td width="10%">小计</td>
+							<td width="10%">操作</td>
+						</div>
+					</thead>
+					<tbody>
+						
+						<tr class="saleTd">
+						<td>
+							<em>包邮</em>
+							满188元，全场包邮（纸尿裤除外）
+							<span class="selfpostage">已包邮</span>
+							</td>
+							</tr>
+							
+						<tr class="no">
+							<td width="50%" class="no-td">
+								<input type="checkbox" />
+								<div class="picture">
+									<a href="">
+										<img src="images/fdg1.jpg" alt="" />
+									</a>
+								</div>
+								<p class="shuoming">
+								<a href="">荷兰牛栏奶粉Nutrilon 1段（0-6个月）850g（海外版）
+                                </a>
+								</p>
+							</td>
+							<td width="15%">
+								<span>￥1608.00</span>
+							</td>
+							<td align="center" valign="middle">
+								<a href="" class="sum">-</a>
+								<input type="text" class="input-sum" value="1"/>
+									<a href="" class="sum">+</a>
+							</td>
+							<td align="center" valign="middle"><span 								class="red">￥3216.00</span>								
+							</td>
+							<td align="center" valign="middle">
+                                    <a href="">删除</a>
+                            </td>
+						</tr>
+					</tbody>	
+						<div class="carAccountMain">
+							 <div class="accountL">
+           				 <span><input type="checkbox" checked="checked" name="qx">全选</span>
+		                <span>
+		                    <a id="Submit1">清空购物车</a>
+		                </span>
+		                <span>
+		                    <a href="/">继续购物</a>
+		                </span>
+       				 </div>
+						
+						 <div class="accountR">
+                            <span name="MScore">
+			                    获得麦豆：<strong>160</strong>
+			                </span>
+			                <span name="save"></span>
+			            <span name="total"> 
+			                <i>2</i>件商品总计：
+			                <em style="font-size:20px">3216.00</em>
+			            </span>
+			            <input type="button"class="accountBtn" value="去结算" style="width:140px;height:45px;line-height:45px;background: red;color:#fff;text-align: center;">
+       			 </div>
+	      </div>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>
